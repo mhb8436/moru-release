@@ -22,12 +22,17 @@
 <p align="center">
   <a href="https://mhb8436.github.io/moru-release/">제품 페이지</a> ·
   <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-brochure-v1.1.pdf">제품 소개서 PDF (A4 9쪽)</a> ·
+  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-leaflet-v1.1.pdf">리플릿 (A4 앞뒤)</a> ·
+  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-slides-v1.1.pptx">발표 자료 (PPTX 15장)</a> ·
+  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-demo-v1.1.mp4">시연 영상 (mp4 1분 41초)</a> ·
   <a href="#도입-문의">도입 문의</a>
 </p>
 
 ---
 
 ## 데모
+
+▶ **시연 영상(1분 41초, mp4)** — 아래 여섯 장면을 장면 제목과 자막을 붙여 한 편으로 이었습니다. [내려받기](https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-demo-v1.1.mp4) · [제품 페이지에서 바로 보기](https://mhb8436.github.io/moru-release/#demo)
 
 시연용 데이터(가상 기관 ‘국립문서정보연구원’, 문서 9건)를 로컬 환경에서 촬영한 화면으로, 편집 없이 실제 동작을 그대로 담았습니다.
 
