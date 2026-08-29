@@ -87,20 +87,6 @@ flowchart LR
 | LLM | 없음 (추출 모드) | OpenAI 호환 엔드포인트 |
 | 형태소 | Kiwi | Nori — 표준용어 사전을 두 곳의 사용자 사전으로 공유 |
 
-## 검증 현황
-
-「지원」이라고 적기 전에 먼저 보는 표다.
-
-| 실물에 붙여 본 것 | 아직인 것 |
-|---|---|
-| H2 · PostgreSQL 14+pgvector · MariaDB · Oracle(oracle-free 23, CI) — core 시험 139건 통과 | Tibero — 방언·마이그레이션은 있으나 실 서버 미실행 |
-| Elasticsearch 8.17 · OpenSearch 3.8(nori·knn) — 하이브리드 검색 | SMS sens·http·db — 실계정 발송 없음 |
-| Ollama(OpenAI 호환) + bge-m3 — 생성·근거 검증·마스킹·브레이커·일일 한도 | Anthropic·OpenAI 실 키 호출 |
-| ClamAV 1.4 — EICAR 400 · 정상 200 · 데몬 꺼짐 409 | 본인확인 NICE·KCB 실 모듈 · OIDC |
-| UI 시나리오 70 — PASS 66 · PARTIAL 3 · BLOCKED 1 · FAIL 0 | 다중 인스턴스(세션·해시 체인 잠금·속도 제한 공유) |
-
-시험 — core 139건(H2·PostgreSQL·MariaDB·Oracle) · ai 119건 · portal typecheck/lint/build. GitHub Actions 잡 6개가 push 마다 돈다.
-
 ## 화면
 
 <table>

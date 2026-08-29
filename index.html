@@ -139,21 +139,6 @@
   </div>
 </section>
 
-<section>
-  <div class="wrap">
-    <h2>검증 현황</h2>
-    <p class="lead">「지원」이라고 적기 전에 먼저 보는 표.</p>
-    <table>
-      <tr><th>실물에 붙여 본 것</th><th>아직인 것</th></tr>
-      <tr><td><span class="ok">H2 · PostgreSQL 14+pgvector · MariaDB · Oracle(CI)</span> — core 시험 139건 통과</td><td><span class="no">Tibero</span> — 방언·마이그레이션은 있으나 실 서버 미실행</td></tr>
-      <tr><td><span class="ok">Elasticsearch 8.17 · OpenSearch 3.8</span>(nori·knn) — 하이브리드 검색</td><td><span class="no">SMS sens·http·db</span> — 실계정 발송 없음</td></tr>
-      <tr><td><span class="ok">Ollama + bge-m3</span> — 생성·근거 검증·마스킹·브레이커·일일 한도</td><td><span class="no">Anthropic·OpenAI 실 키</span> 호출</td></tr>
-      <tr><td><span class="ok">ClamAV 1.4</span> — EICAR 400 · 정상 200 · 데몬 꺼짐 409</td><td><span class="no">본인확인 NICE·KCB</span> 실 모듈 · OIDC</td></tr>
-      <tr><td><span class="ok">UI 시나리오 70</span> — PASS 66 · PARTIAL 3 · BLOCKED 1 · FAIL 0</td><td><span class="no">다중 인스턴스</span> — 세션·해시 체인 잠금·속도 제한 공유</td></tr>
-    </table>
-  </div>
-</section>
-
 <section class="alt">
   <div class="wrap">
     <h2>화면</h2>
