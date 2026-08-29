@@ -11,6 +11,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/eGovFrame-5.0-0e2a47" alt="eGovFrame 5.0">
+  <img src="https://img.shields.io/badge/KRDS-1.1-0e2a47" alt="KRDS 1.1">
   <img src="https://img.shields.io/badge/Spring%20Boot-3.5-0e2a47" alt="Spring Boot 3.5">
   <img src="https://img.shields.io/badge/Java-17-0e2a47" alt="Java 17">
   <img src="https://img.shields.io/badge/DB-PostgreSQL%20%7C%20MariaDB%20%7C%20Oracle-e8a020" alt="DB">
@@ -52,7 +53,7 @@
 | 구성 | 제공 기능 |
 |---|---|
 | **core 10** | 계정·인증(잠금·임시 비밀번호) · 권한 RBAC(게시판별 읽기/쓰기 역할) · 조직·사용자 · 게시판 엔진 · 첨부(확장자·MIME·시그니처 3중 검사, ClamAV) · 코드·표준사전(DDL 컬럼명 검증) · 배치 스케줄러 · 감사로그(해시 체인) · 알림(포털·메일·SMS) · 연계 어댑터 |
-| **portal 10** | 메뉴·IA · 콘텐츠(승인·버전·복원) · 회원(약관 이력·본인확인 연계점) · 템플릿(기관명·테마·레이아웃을 데이터로 관리) · 팝업·배너 · 접근성 컴포넌트 · 통합검색 · 개방 API(X-API-Key·일일 한도·OpenAPI 3.0) · 웹로그 통계 · 관리자 접근통제(IP·TOTP) |
+| **portal 10** | KRDS(디지털정부서비스 UI/UX 가이드라인) 누리집 틀(마스트헤드·유틸리티·주메뉴·푸터) · 메뉴·IA · 콘텐츠(승인·버전·복원) · 회원(약관 이력·본인확인 연계점) · 템플릿(기관명·테마·레이아웃을 데이터로 관리) · 팝업·배너 · 접근성 컴포넌트 · 통합검색 · 개방 API(X-API-Key·일일 한도·OpenAPI 3.0) · 웹로그 통계 · 관리자 접근통제(IP·TOTP) |
 | **ai 5** | AI 게이트웨이(개인정보 마스킹·쿼터·서킷브레이커·DMZ 중계) · 문서 파싱(HWP·HWPX·HWPML·PDF·DOCX·XLSX·CSV·TXT·MD·JSON) · 색인·검색(BM25·벡터·RRF) · 챗봇(멀티턴·시나리오·콘텐츠 초안) · 근거 검증(문장↔출처) |
 | **게시판 7유형** | 공지 · FAQ · 자료실 · 포토갤러리 · 묻고 답하기 · 동영상 · E-Book |
 | **업무 팩 1 — 위원회** | 위원회·위원·회의·안건·표결·의결서 관리. 정족수 비율, 법정기한(소집 통지 7일·안건 송부 3일), 가부동수 규칙, 서면의결 이중 정족수, 의결서 해시 봉인 |
@@ -104,7 +105,7 @@ flowchart LR
 
 ## In English
 
-MORU is an on-premises public-portal product built on the Korean eGovFrame 5.0 runtime (Spring Boot 3.5 · Tomcat 10 · Java 17). It ships with accounts, RBAC, boards, attachments, a standard-term dictionary, batch jobs, hash-chained audit logs, a CMS with approval and versioning, unified search, and a document-AI sidecar that reads HWP/HWPX/HWPML without external libraries and attaches evidence to every answer sentence. It runs with zero configuration (H2 · SQLite BM25 · Kiwi) and switches to PostgreSQL/MariaDB/Oracle, OpenSearch, pgvector and any OpenAI-compatible LLM through environment variables. The LLM can be turned off entirely.
+MORU is an on-premises public-portal product built on the Korean eGovFrame 5.0 runtime with the KRDS (Korea Design System) portal shell (Spring Boot 3.5 · Tomcat 10 · Java 17). It ships with accounts, RBAC, boards, attachments, a standard-term dictionary, batch jobs, hash-chained audit logs, a CMS with approval and versioning, unified search, and a document-AI sidecar that reads HWP/HWPX/HWPML without external libraries and attaches evidence to every answer sentence. It runs with zero configuration (H2 · SQLite BM25 · Kiwi) and switches to PostgreSQL/MariaDB/Oracle, OpenSearch, pgvector and any OpenAI-compatible LLM through environment variables. The LLM can be turned off entirely.
 
 ---
 
