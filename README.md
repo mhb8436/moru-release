@@ -2,7 +2,7 @@
   <img src="images/brand/package-3d.png" width="300" alt="MORU 공공포털 플랫폼 v1.1">
 </p>
 
-<h1 align="center">MORU — 표준프레임워크 위에, 바로 쓰는 공공포털</h1>
+<h1 align="center">표준프레임워크 위에, 바로 쓰는 공공포털</h1>
 
 <p align="center">
   전자정부 표준프레임워크 4.3 위에서 도는 누리집 CMS · 통합검색 · 문서 AI · 업무 팩.<br>
@@ -20,7 +20,7 @@
 
 <p align="center">
   <a href="https://mhb8436.github.io/moru-release/">제품 페이지</a> ·
-  <a href="docs/MORU-제품소개서-v1.1.pdf">제품 소개서 PDF (A4 10쪽)</a> ·
+  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-brochure-v1.1.pdf">제품 소개서 PDF (A4 10쪽)</a> ·
   <a href="#도입-문의">도입 문의</a>
 </p>
 
