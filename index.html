@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MORU — 표준프레임워크 위에, 바로 쓰는 공공포털</title>
+<meta name="description" content="전자정부 표준프레임워크 4.3 위에서 도는 누리집 CMS · 통합검색 · 문서 AI · 업무 팩. 환경변수 없이 설치 0 으로 돌고, AI 는 켜고 끌 수 있다.">
+<meta property="og:title" content="MORU 공공포털 플랫폼 v1.1">
+<meta property="og:description" content="표준프레임워크 위에, 바로 쓰는 공공포털 — 누리집 CMS · 통합검색 · 문서 AI · 업무 팩">
+<meta property="og:image" content="https://mhb8436.github.io/moru-release/images/brand/product-image-920.png">
+<link rel="icon" href="images/brand/app-icon.png">
+<style>
+  :root{--navy:#0e2a47;--gold:#e8a020;--slate:#5a6b80;--line:#e4e8ee;--bg:#f4f6f9;--ink:#1b2733}
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#fff;color:var(--ink);font-family:"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.6;word-break:keep-all}
+  a{color:var(--navy)}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  header{background:var(--navy);color:#fff;padding:28px 0 0}
+  header .bar{display:flex;justify-content:space-between;align-items:center;font-size:14px;color:#c7d2df}
+  header .bar .ver{border:1px solid #5a7390;border-radius:4px;padding:3px 10px;color:#fff}
+  .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center;padding:36px 0 40px}
+  .hero h1{font-size:40px;line-height:1.2;margin:18px 0 12px;letter-spacing:-.01em}
+  .hero p{font-size:18px;color:#d9e2ec;margin:0 0 20px}
+  .hero .pills span{display:inline-block;border:1px solid #7f95ad;border-radius:99px;padding:6px 16px;font-size:14px;margin:0 6px 8px 0}
+  .hero img.case{width:100%;max-width:380px;display:block;margin:0 auto;filter:drop-shadow(0 18px 30px rgba(0,0,0,.35))}
+  .hero .cta{margin-top:18px}
+  .btn{display:inline-block;background:var(--gold);color:#1b2733;font-weight:700;padding:12px 20px;border-radius:5px;text-decoration:none;margin-right:10px}
+  .btn.ghost{background:transparent;color:#fff;border:1px solid #7f95ad}
+  .stats{background:var(--gold);color:#1b2733}
+  .stats .wrap{display:grid;grid-template-columns:repeat(6,1fr);text-align:center;padding:14px 24px}
+  .stats b{display:block;font-size:24px;line-height:1.1}
+  .stats small{font-size:12.5px}
+  section{padding:56px 0}
+  section.alt{background:var(--bg)}
+  h2{font-size:28px;color:var(--navy);margin:0 0 8px;letter-spacing:-.01em}
+  .lead{font-size:17px;color:var(--slate);margin:0 0 28px}
+  .demos{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+  .demo img{width:100%;display:block;border:1px solid var(--line);border-radius:6px}
+  .demo h3{font-size:17px;margin:12px 0 4px;color:var(--navy)}
+  .demo p{margin:0;color:var(--slate);font-size:14.5px}
+  table{width:100%;border-collapse:collapse;font-size:15px;background:#fff}
+  th,td{border-bottom:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
+  th{background:var(--bg);color:var(--navy)}
+  td.k{color:var(--navy);font-weight:700;white-space:nowrap}
+  .three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+  .card{background:#fff;border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:6px;padding:18px 20px}
+  .card h3{margin:0 0 6px;color:var(--navy);font-size:17px}
+  .card p{margin:0;font-size:14.5px}
+  .shots{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  .shots img{width:100%;border:1px solid var(--line);border-radius:6px;display:block}
+  .shots figcaption{font-size:13.5px;color:var(--slate);margin-top:6px}
+  .ok{color:#1f6f4a;font-weight:700}.no{color:#a33;font-weight:700}
+  footer{background:var(--navy);color:#c7d2df;padding:36px 0;font-size:14px}
+  footer img{height:34px;display:block;margin-bottom:12px}
+  footer a{color:#fff}
+  @media (max-width:820px){.hero{grid-template-columns:1fr}.hero h1{font-size:30px}.stats .wrap{grid-template-columns:repeat(3,1fr);gap:10px}.demos,.three,.shots{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="bar"><span>주식회사 크래프틱시스템즈</span><span class="ver">MORU v1.1 · 2026년 8월</span></div>
+    <div class="hero">
+      <div>
+        <img src="images/brand/logo-on-navy.png" alt="MORU 공공포털 플랫폼" style="width:260px;display:block;clip-path:inset(3% round 6px)">
+        <h1>표준프레임워크 위에,<br>바로 쓰는 공공포털</h1>
+        <p>전자정부 표준프레임워크 4.3 위에서 도는 누리집 CMS · 통합검색 · 문서 AI · 업무 팩.<br>환경변수 없이 「설치 0」으로 돌고, AI 는 켜고 끌 수 있다.</p>
+        <div class="pills"><span>누리집 CMS</span><span>통합검색</span><span>문서 AI</span><span>업무 팩</span></div>
+        <div class="cta"><a class="btn" href="docs/MORU-제품소개서-v1.1.pdf">제품 소개서 PDF</a><a class="btn ghost" href="https://github.com/mhb8436/moru-release">GitHub</a></div>
+      </div>
+      <div><img class="case" src="images/brand/package-3d.png" alt=""></div>
+    </div>
+  </div>
+</header>
+<div class="stats"><div class="wrap">
+  <div><b>20<small>탭</small></b><small>관리 화면</small></div>
+  <div><b>7<small>유형</small></b><small>게시판</small></div>
+  <div><b>4<small>종</small></b><small>DB — H2·PG·MariaDB·Oracle</small></div>
+  <div><b>10<small>형식</small></b><small>읽는 문서 (HWP 3형식 포함)</small></div>
+  <div><b>139 · 119</b><small>시험 core · ai</small></div>
+  <div><b>100<small>%</small></b><small>표준단어 컬럼 준수율</small></div>
+</div></div>
+
+<section>
+  <div class="wrap">
+    <h2>동작하는 화면</h2>
+    <p class="lead">시연 데이터(가상 기관 「모루시」, 문서 7건)로 로컬에서 찍었다. 편집하지 않은 실제 동작이다.</p>
+    <div class="demos">
+      <div class="demo"><img src="gifs/01-search.gif" alt="통합검색" loading="lazy"><h3>통합검색</h3><p>게시물과 기관 문서 본문을 한 번에 찾고, 검색어를 노랗게 표시한다.</p></div>
+      <div class="demo"><img src="gifs/02-doc-ai.gif" alt="문서 AI" loading="lazy"><h3>문서 AI — LLM 없이</h3><p>추출 모드. 답변 문장마다 「근거 확인」과 출처 번호가 붙는다. 49ms.</p></div>
+      <div class="demo"><img src="gifs/04-content.gif" alt="콘텐츠 승인·게시" loading="lazy"><h3>콘텐츠 승인 → 게시</h3><p>초안을 승인 요청하고 게시하면 누리집에 바로 나온다. 저장마다 버전이 남는다.</p></div>
+      <div class="demo"><img src="gifs/03-committee.gif" alt="위원회 의결서" loading="lazy"><h3>위원회 의결서</h3><p>회의 결과·표수와 의결서. 해시로 봉인해 「위변조 확인: 이상 없음」을 표시한다.</p></div>
+      <div class="demo"><img src="gifs/06-security.gif" alt="보안 점검" loading="lazy"><h3>보안 점검</h3><p>설정을 읽어 판정하고, CSRF·비밀번호 정책·헤더·오류 노출·CORS 는 자기 자신에게 요청을 보내 잰다.</p></div>
+      <div class="demo"><img src="gifs/05-language.gif" alt="언어 전환" loading="lazy"><h3>한국어 ↔ English</h3><p>메뉴·게시판 이름·사이트 문구는 번역 표, 콘텐츠는 언어별 행. 없으면 기본 언어로 대신 낸다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>갈리는 지점 셋</h2>
+    <p class="lead">표준프레임워크는 프레임워크지 제품이 아니다. 사업마다 계정·권한·게시판·첨부·표준사전·배치를 다시 만든다. MORU 는 그 자리를 미리 채워 둔다.</p>
+    <div class="three">
+      <div class="card"><h3>HWP 를 읽는다</h3><p>HWP 5.0(OLE) · HWPX(ZIP+XML) · HWPML(XML) 세 형식을 외부 HWP 라이브러리 없이 읽는다. 확장자보다 내용(매직바이트)을 먼저 본다.</p></div>
+      <div class="card"><h3>답변 문장마다 근거를 붙인다</h3><p>검색된 문서 조각과 정렬해 「근거 확인 / 부분 확인 / 근거 없음」으로 표시한다. 숫자·부정어·기관명이 출처와 다르면 「부분 확인」으로 내린다.</p></div>
+      <div class="card"><h3>LLM 을 끌 수 있다</h3><p>auto · extract · rule 세 모드가 같은 인터페이스를 쓴다. LLM 을 금지하는 사업은 모드를 내린다. 다른 제품을 만들지 않는다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>무엇이 들어 있나</h2>
+    <p class="lead">core 10 · portal 10 · ai 5 블록, 게시판 7 유형, 관리자 20탭, 업무 팩 1.</p>
+    <table>
+      <tr><td class="k">core 10</td><td>계정·인증(잠금·임시 비밀번호) · 권한 RBAC(게시판별 읽기/쓰기 역할) · 조직·사용자 · 게시판 엔진 · 첨부(확장자·MIME·시그니처 3중 검사, ClamAV) · 코드·표준사전(DDL 컬럼명 검증) · 배치 스케줄러 · 감사로그(해시 체인) · 알림(포털·메일·SMS) · 연계 어댑터</td></tr>
+      <tr><td class="k">portal 10</td><td>메뉴·IA · 콘텐츠(승인·버전·복원) · 회원(약관 이력·본인확인 연계점) · 템플릿(기관명·테마·레이아웃을 데이터로) · 팝업·배너 · 접근성 컴포넌트 · 통합검색 · 개방 API(X-API-Key·일일 한도·OpenAPI 3.0) · 웹로그 통계 · 관리자 접근통제(IP·TOTP)</td></tr>
+      <tr><td class="k">ai 5</td><td>AI 게이트웨이(개인정보 마스킹·쿼터·서킷브레이커·DMZ 중계) · 문서 파싱 · 색인·검색(BM25·벡터·RRF) · 챗봇(멀티턴·시나리오·콘텐츠 초안) · 근거 검증(문장↔출처)</td></tr>
+      <tr><td class="k">게시판 7 유형</td><td>공지 · FAQ · 자료실 · 포토갤러리 · 묻고 답하기 · 동영상(youtube·naver·kakao·mp4) · E-Book(PDF 를 페이지 안에서)</td></tr>
+      <tr><td class="k">업무 팩 1 위원회</td><td>위원회·위원·회의·안건·표결·의결서. 정족수 %, 법정기한(통지 7일·송부 3일), 가부동수 규칙, 서면의결 이중 정족수, 의결서 해시 봉인. 관리 탭 1 · 공개 3면 · 위원 2면</td></tr>
+      <tr><td class="k">관리자 20탭</td><td>배치 · 사용자·권한 · 조직 · 감사로그 · 접속로그 · 코드 · 표준사전 · 게시판 정의 · 메뉴 · 콘텐츠 · 사이트·템플릿 · 팝업·배너 · 접속 통계 · 개방 API · AI · 필터링 단어 · SMS · 알림 · 위원회 · 보안 점검</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>기본값과 어댑터</h2>
+    <p class="lead">환경변수를 하나도 주지 않으면 <code>./deploy/run.sh</code> 한 번으로 세 프로세스(portal :3000 · core :8080 · ai :8800)가 뜬다. 도커도, 별도 상용 SW 도 필요 없다. 기관 요구가 있을 때만 어댑터를 켠다.</p>
+    <table>
+      <tr><th>층</th><th>기본 (설치 0)</th><th>어댑터</th></tr>
+      <tr><td class="k">DB</td><td>PostgreSQL (운영) · H2 (로컬)</td><td>MariaDB · Oracle/Tibero — Flyway 벤더 폴더 + MyBatis databaseId</td></tr>
+      <tr><td class="k">검색</td><td>SQLite + BM25</td><td>OpenSearch(nori) · Elasticsearch</td></tr>
+      <tr><td class="k">벡터</td><td>꺼짐</td><td>pgvector · sqlite-vec · OpenSearch kNN — 임베딩은 /v1/embeddings 규격(Ollama · vLLM · OpenAI)</td></tr>
+      <tr><td class="k">LLM</td><td>없음 (추출 모드)</td><td>OpenAI 호환 엔드포인트</td></tr>
+      <tr><td class="k">형태소</td><td>Kiwi</td><td>Nori — 표준용어 사전을 두 곳의 사용자 사전으로 공유</td></tr>
+      <tr><td class="k">실행환경</td><td colspan="2">org.egovframe.rte 4.3.0 · Spring Boot 2.7 · Tomcat 9 · Java 17 · MyBatis · Flyway V1~V12(표 36개). 4.3 은 Spring 5.3 · javax 세대라 Tomcat 10 과는 짝이 아니다.</td></tr>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>검증 현황</h2>
+    <p class="lead">「지원」이라고 적기 전에 먼저 보는 표.</p>
+    <table>
+      <tr><th>실물에 붙여 본 것</th><th>아직인 것</th></tr>
+      <tr><td><span class="ok">H2 · PostgreSQL 14+pgvector · MariaDB · Oracle(CI)</span> — core 시험 139건 통과</td><td><span class="no">Tibero</span> — 방언·마이그레이션은 있으나 실 서버 미실행</td></tr>
+      <tr><td><span class="ok">Elasticsearch 8.17 · OpenSearch 3.8</span>(nori·knn) — 하이브리드 검색</td><td><span class="no">SMS sens·http·db</span> — 실계정 발송 없음</td></tr>
+      <tr><td><span class="ok">Ollama + bge-m3</span> — 생성·근거 검증·마스킹·브레이커·일일 한도</td><td><span class="no">Anthropic·OpenAI 실 키</span> 호출</td></tr>
+      <tr><td><span class="ok">ClamAV 1.4</span> — EICAR 400 · 정상 200 · 데몬 꺼짐 409</td><td><span class="no">본인확인 NICE·KCB</span> 실 모듈 · OIDC</td></tr>
+      <tr><td><span class="ok">UI 시나리오 70</span> — PASS 66 · PARTIAL 3 · BLOCKED 1 · FAIL 0</td><td><span class="no">다중 인스턴스</span> — 세션·해시 체인 잠금·속도 제한 공유</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>화면</h2>
+    <div class="shots">
+      <figure style="margin:0"><img src="images/screens/01-메인.jpg" alt="" loading="lazy"><figcaption>누리집 첫 화면 — 기관명·문구·테마 색은 관리 화면의 데이터</figcaption></figure>
+      <figure style="margin:0"><img src="images/screens/03-문서AI.jpg" alt="" loading="lazy"><figcaption>문서 AI — 문장마다 근거 확인, 출처 번호</figcaption></figure>
+      <figure style="margin:0"><img src="images/screens/11-관리자-보안점검.jpg" alt="" loading="lazy"><figcaption>관리자 → 보안 점검 — 항목마다 상태·상세·조치 방법</figcaption></figure>
+      <figure style="margin:0"><img src="images/screens/10-관리자-표준사전.jpg" alt="" loading="lazy"><figcaption>관리자 → 표준사전 — 표준용어 · 표준단어 · DDL 검증</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>도입 · 문의</h2>
+    <div class="three">
+      <div class="card"><h3>기관 서버 설치형</h3><p>세 프로세스를 한 서버 또는 세 서버에 나눠 둔다. 클라우드 계정이나 외부 SaaS 에 붙지 않는다.</p></div>
+      <div class="card"><h3>망분리</h3><p>AI 사이드카를 빼고 core + portal 만 두거나, LLM 호출만 DMZ squid 로 중계한다.</p></div>
+      <div class="card"><h3>시작</h3><p>빈 PostgreSQL 하나와 환경변수 여섯 개. Flyway 가 첫 기동에서 표 36개를 만든다. 절차는 소개서 10쪽.</p></div>
+    </div>
+    <p style="margin-top:24px">문의 — 주식회사 크래프틱시스템즈 · <a href="https://github.com/mhb8436/moru-release/issues">GitHub Issues</a> · 담당자·전화·전자우편 <em>(기입 예정)</em></p>
+  </div>
+</section>
+
+<footer><div class="wrap">
+  <img src="images/brand/logo-on-navy.png" alt="MORU" style="height:44px;clip-path:inset(3% round 4px)">
+  MORU(모루) 공공포털 플랫폼 v1.1 · 주식회사 크래프틱시스템즈 · 이 페이지의 이미지·문서는 제품 소개 목적으로 공개한다. 소스 코드는 별도 저장소에 있다.
+</div></footer>
+</body>
+</html>
