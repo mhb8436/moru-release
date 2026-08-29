@@ -5,13 +5,13 @@
 <h1 align="center">표준프레임워크 위에서 바로 시작하는 공공포털</h1>
 
 <p align="center">
-  전자정부 표준프레임워크 4.3 환경에서 동작하는 누리집 CMS · 통합검색 · 문서 AI · 업무 팩.<br>
+  전자정부 표준프레임워크 5.0 환경에서 동작하는 누리집 CMS · 통합검색 · 문서 AI · 업무 팩.<br>
   환경변수 설정 없이 ‘설치 0’ 상태로 실행되며, AI 기능은 필요에 따라 켜고 끌 수 있습니다.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/eGovFrame-4.3-0e2a47" alt="eGovFrame 4.3">
-  <img src="https://img.shields.io/badge/Spring%20Boot-2.7-0e2a47" alt="Spring Boot 2.7">
+  <img src="https://img.shields.io/badge/eGovFrame-5.0-0e2a47" alt="eGovFrame 5.0">
+  <img src="https://img.shields.io/badge/Spring%20Boot-3.5-0e2a47" alt="Spring Boot 3.5">
   <img src="https://img.shields.io/badge/Java-17-0e2a47" alt="Java 17">
   <img src="https://img.shields.io/badge/DB-PostgreSQL%20%7C%20MariaDB%20%7C%20Oracle-e8a020" alt="DB">
   <img src="https://img.shields.io/badge/%EC%8B%9C%ED%97%98-core%20139%20%C2%B7%20ai%20119%20%C2%B7%20UI%2070-1f6f4a" alt="시험">
@@ -70,7 +70,7 @@
 flowchart LR
   U[국민 · 담당자<br>브라우저] --> P
   P[MORU portal<br>Next.js · TypeScript<br>:3000] --> C
-  C[MORU core<br>표준프레임워크 4.3 · Spring Boot 2.7<br>Tomcat 9 · Java 17 · MyBatis · Flyway<br>:8080] --> DB[(PostgreSQL · H2<br>MariaDB · Oracle)]
+  C[MORU core<br>표준프레임워크 5.0 · Spring Boot 3.5<br>Tomcat 10 · Java 17 · MyBatis · Flyway<br>:8080] --> DB[(PostgreSQL · H2<br>MariaDB · Oracle)]
   C -. 선택 .-> A[MORU ai<br>FastAPI :8800]
   A --> S[색인 SQLite+BM25<br>→ OpenSearch · Elasticsearch]
   A --> V[벡터 미사용<br>→ pgvector · kNN]
@@ -110,7 +110,7 @@ flowchart LR
 
 ## In English
 
-MORU is an on-premises public-portal product built on the Korean eGovFrame 4.3 runtime (Spring Boot 2.7 · Tomcat 9 · Java 17). It ships with accounts, RBAC, boards, attachments, a standard-term dictionary, batch jobs, hash-chained audit logs, a CMS with approval and versioning, unified search, and a document-AI sidecar that reads HWP/HWPX/HWPML without external libraries and attaches evidence to every answer sentence. It runs with zero configuration (H2 · SQLite BM25 · Kiwi) and switches to PostgreSQL/MariaDB/Oracle, OpenSearch, pgvector and any OpenAI-compatible LLM through environment variables. The LLM can be turned off entirely.
+MORU is an on-premises public-portal product built on the Korean eGovFrame 5.0 runtime (Spring Boot 3.5 · Tomcat 10 · Java 17). It ships with accounts, RBAC, boards, attachments, a standard-term dictionary, batch jobs, hash-chained audit logs, a CMS with approval and versioning, unified search, and a document-AI sidecar that reads HWP/HWPX/HWPML without external libraries and attaches evidence to every answer sentence. It runs with zero configuration (H2 · SQLite BM25 · Kiwi) and switches to PostgreSQL/MariaDB/Oracle, OpenSearch, pgvector and any OpenAI-compatible LLM through environment variables. The LLM can be turned off entirely.
 
 ---
 
