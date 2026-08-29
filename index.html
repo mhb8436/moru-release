@@ -64,7 +64,7 @@
       <div>
         <img src="images/brand/logo-on-navy.png" alt="MORU 공공포털 플랫폼" style="width:260px;display:block;clip-path:inset(3% round 6px)">
         <h1>표준프레임워크 위에,<br>바로 쓰는 공공포털</h1>
-        <p>전자정부 표준프레임워크 4.3 위에서 도는 누리집 CMS · 통합검색 · 문서 AI · 업무 팩.<br>환경변수 없이 「설치 0」으로 돌고, AI 는 켜고 끌 수 있다.</p>
+        <p>전자정부 표준프레임워크 4.3에서 동작하는 누리집 CMS, 통합검색, 문서 AI, 업무 팩이다.<br>환경변수 설정 없이 「설치 0」 상태로 실행할 수 있으며, AI 기능은 켜고 끌 수 있다.</p>
         <div class="pills"><span>누리집 CMS</span><span>통합검색</span><span>문서 AI</span><span>업무 팩</span></div>
         <div class="cta"><a class="btn" href="docs/MORU-제품소개서-v1.1.pdf">제품 소개서 PDF</a><a class="btn ghost" href="https://github.com/mhb8436/moru-release">GitHub</a></div>
       </div>
@@ -84,14 +84,14 @@
 <section>
   <div class="wrap">
     <h2>동작하는 화면</h2>
-    <p class="lead">시연 데이터(가상 기관 「모루시」, 문서 7건)로 로컬에서 찍었다. 편집하지 않은 실제 동작이다.</p>
+    <p class="lead">시연용 데이터(가상 기관 「모루시」, 문서 7건)를 로컬 환경에서 촬영한 것으로, 편집하지 않은 실제 동작이다.</p>
     <div class="demos">
-      <div class="demo"><img src="gifs/01-search.gif" alt="통합검색" loading="lazy"><h3>통합검색</h3><p>게시물과 기관 문서 본문을 한 번에 찾고, 검색어를 노랗게 표시한다.</p></div>
-      <div class="demo"><img src="gifs/02-doc-ai.gif" alt="문서 AI" loading="lazy"><h3>문서 AI — LLM 없이</h3><p>추출 모드. 답변 문장마다 「근거 확인」과 출처 번호가 붙는다.</p></div>
-      <div class="demo"><img src="gifs/04-content.gif" alt="콘텐츠 승인·게시" loading="lazy"><h3>콘텐츠 승인 → 게시</h3><p>초안을 승인 요청하고 게시하면 누리집에 바로 나온다. 저장마다 버전이 남는다.</p></div>
-      <div class="demo"><img src="gifs/03-committee.gif" alt="위원회 의결서" loading="lazy"><h3>위원회 의결서</h3><p>회의 결과·표수와 의결서. 해시로 봉인해 「위변조 확인: 이상 없음」을 표시한다.</p></div>
-      <div class="demo"><img src="gifs/06-security.gif" alt="보안 점검" loading="lazy"><h3>보안 점검</h3><p>설정을 읽어 판정하고, CSRF·비밀번호 정책·헤더·오류 노출·CORS 는 자기 자신에게 요청을 보내 잰다.</p></div>
-      <div class="demo"><img src="gifs/05-language.gif" alt="언어 전환" loading="lazy"><h3>한국어 ↔ English</h3><p>메뉴·게시판 이름·사이트 문구는 번역 표, 콘텐츠는 언어별 행. 없으면 기본 언어로 대신 낸다.</p></div>
+      <div class="demo"><img src="gifs/01-search.gif" alt="통합검색" loading="lazy"><h3>통합검색</h3><p>게시물과 기관 문서 본문을 한 번에 검색하고, 검색어를 노란색으로 강조한다.</p></div>
+      <div class="demo"><img src="gifs/02-doc-ai.gif" alt="문서 AI" loading="lazy"><h3>문서 AI — LLM 없이</h3><p>추출 모드에서는 답변 문장마다 「근거 확인」과 출처 번호가 붙는다.</p></div>
+      <div class="demo"><img src="gifs/04-content.gif" alt="콘텐츠 승인·게시" loading="lazy"><h3>콘텐츠 승인 → 게시</h3><p>초안 승인 요청 후 게시하면 누리집에 바로 반영된다. 저장할 때마다 버전이 남는다.</p></div>
+      <div class="demo"><img src="gifs/03-committee.gif" alt="위원회 의결서" loading="lazy"><h3>위원회 의결서</h3><p>회의 결과와 표수, 그리고 의결서. 의결서는 해시로 봉인해 「위변조 확인: 이상 없음」을 표시한다.</p></div>
+      <div class="demo"><img src="gifs/06-security.gif" alt="보안 점검" loading="lazy"><h3>보안 점검</h3><p>설정을 읽어 판단하고, CSRF·비밀번호 정책·헤더·오류 노출·CORS는 자기 자신에게 요청을 보내 측정한다.</p></div>
+      <div class="demo"><img src="gifs/05-language.gif" alt="언어 전환" loading="lazy"><h3>한국어 ↔ English</h3><p>메뉴·게시판 이름·사이트 문구는 번역 표로 관리하고, 콘텐츠는 언어별 행으로 관리한다. 해당 언어가 없으면 기본 언어로 대신 표시한다.</p></div>
     </div>
   </div>
 </section>
@@ -99,11 +99,11 @@
 <section class="alt">
   <div class="wrap">
     <h2>갈리는 지점 셋</h2>
-    <p class="lead">표준프레임워크는 프레임워크지 제품이 아니다. 사업마다 계정·권한·게시판·첨부·표준사전·배치를 다시 만든다. MORU 는 그 자리를 미리 채워 둔다.</p>
+    <p class="lead">표준프레임워크는 프레임워크일 뿐 제품이 아니다. 사업마다 계정·권한·게시판·첨부·표준사전·배치를 다시 만들어야 한다. MORU는 그 자리를 미리 채워 둔다.</p>
     <div class="three">
-      <div class="card"><h3>HWP 를 읽는다</h3><p>HWP 5.0(OLE) · HWPX(ZIP+XML) · HWPML(XML) 세 형식을 외부 HWP 라이브러리 없이 읽는다. 확장자보다 내용(매직바이트)을 먼저 본다.</p></div>
-      <div class="card"><h3>답변 문장마다 근거를 붙인다</h3><p>검색된 문서 조각과 정렬해 「근거 확인 / 부분 확인 / 근거 없음」으로 표시한다. 숫자·부정어·기관명이 출처와 다르면 「부분 확인」으로 내린다.</p></div>
-      <div class="card"><h3>LLM 을 끌 수 있다</h3><p>auto · extract · rule 세 모드가 같은 인터페이스를 쓴다. LLM 을 금지하는 사업은 모드를 내린다. 다른 제품을 만들지 않는다.</p></div>
+      <div class="card"><h3>HWP 를 읽는다</h3><p>HWP 5.0(OLE), HWPX(ZIP+XML), HWPML(XML) 형식을 외부 HWP 라이브러리 없이 읽을 수 있으며, 확장자보다 파일 내용(매직바이트)을 먼저 확인한다.</p></div>
+      <div class="card"><h3>답변 문장마다 근거를 붙인다</h3><p>검색된 문서 조각과 대조하여 「근거 확인 / 부분 확인 / 근거 없음」으로 표시한다. 숫자·부정어·기관명이 출처와 다르면 「부분 확인」으로 처리한다.</p></div>
+      <div class="card"><h3>LLM 을 끌 수 있다</h3><p>auto·extract·rule 세 모드는 동일한 인터페이스를 사용한다. LLM 을 금지하는 사업에서는 모드를 extract 나 rule 로 내린다. 별도의 제품은 만들지 않는다.</p></div>
     </div>
   </div>
 </section>
@@ -155,9 +155,9 @@
   <div class="wrap">
     <h2>도입 · 문의</h2>
     <div class="three">
-      <div class="card"><h3>기관 서버 설치형</h3><p>세 프로세스를 한 서버 또는 세 서버에 나눠 둔다. 클라우드 계정이나 외부 SaaS 에 붙지 않는다.</p></div>
+      <div class="card"><h3>기관 서버 설치형</h3><p>세 프로세스를 한 서버에 두거나 세 서버로 나누어 배치한다. 클라우드 계정이나 외부 SaaS에는 연결되지 않는다.</p></div>
       <div class="card"><h3>망분리</h3><p>AI 사이드카를 빼고 core + portal 만 두거나, LLM 호출만 DMZ squid 로 중계한다.</p></div>
-      <div class="card"><h3>시작</h3><p>빈 PostgreSQL 하나와 환경변수 여섯 개. Flyway 가 첫 기동에서 표 36개를 만든다. 절차는 소개서 10쪽.</p></div>
+      <div class="card"><h3>시작</h3><p>빈 PostgreSQL 하나와 환경변수 여섯 개만 있으면, Flyway가 첫 실행에서 36개의 표를 생성한다. 절차는 소개서 9쪽에 있다.</p></div>
     </div>
     <p style="margin-top:24px">문의 — 주식회사 크래프틱시스템즈 · <a href="https://github.com/mhb8436/moru-release/issues">GitHub Issues</a> · 담당자·전화·전자우편 <em>(기입 예정)</em></p>
   </div>
