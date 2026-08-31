@@ -22,10 +22,10 @@
 
 <p align="center">
   <a href="https://mhb8436.github.io/moru-release/">제품 페이지</a> ·
-  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-brochure-v1.1.pdf">제품 소개서 PDF (A4 9쪽)</a> ·
+  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-brochure-v1.1.pdf">제품 소개서 PDF (A4 10쪽)</a> ·
   <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-leaflet-v1.1.pdf">리플릿 (A4 앞뒤)</a> ·
-  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-slides-v1.1.pptx">발표 자료 (PPTX 15장)</a> ·
-  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-demo-v1.1.mp4">시연 영상 (mp4 1분 41초)</a> ·
+  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-slides-v1.1.pptx">발표 자료 (PPTX 16장)</a> ·
+  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-demo-v1.1.mp4">시연 영상 (mp4 1분 59초)</a> ·
   <a href="https://github.com/mhb8436/moru-krds-react">KRDS React 부품 45종 (MIT)</a> ·
   <a href="#도입-문의">도입 문의</a>
 </p>
@@ -34,7 +34,7 @@
 
 ## 데모
 
-▶ **시연 영상(1분 41초, mp4)** — 아래 여섯 장면을 장면 제목과 자막을 붙여 한 편으로 이었습니다. [내려받기](https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-demo-v1.1.mp4) · [제품 페이지에서 바로 보기](https://mhb8436.github.io/moru-release/#demo)
+▶ **시연 영상(1분 59초, mp4)** — 아래 일곱 장면을 장면 제목과 자막을 붙여 한 편으로 이었습니다. [내려받기](https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-demo-v1.1.mp4) · [제품 페이지에서 바로 보기](https://mhb8436.github.io/moru-release/#demo)
 
 시연용 데이터(가상 기관 ‘국립문서정보연구원’, 문서 9건)를 로컬 환경에서 촬영한 화면으로, 편집 없이 실제 동작을 그대로 담았습니다.
 
@@ -154,7 +154,7 @@ flowchart LR
 
 - **도입 형태** — 기관 서버 설치형입니다. 세 개의 프로세스를 한 대의 서버에 함께 배치하거나 세 대의 서버로 나누어 구성합니다. 클라우드 계정이나 외부 SaaS와는 연동하지 않습니다.
 - **망분리 환경** — AI 사이드카를 제외하고 core와 portal만 운영하거나, LLM 호출만 DMZ의 squid를 통해 중계합니다.
-- **시작하기** — 비어 있는 PostgreSQL 하나와 환경변수 여섯 개만 준비하면 됩니다. Flyway가 첫 기동 시 테이블 36개를 생성합니다. 자세한 절차는 [제품 소개서](docs/MORU-제품소개서-v1.1.pdf) 9쪽에 있습니다.
+- **시작하기** — 비어 있는 PostgreSQL 하나와 환경변수 여섯 개만 준비하면 됩니다. Flyway가 첫 기동 시 테이블 36개를 생성합니다. 자세한 절차는 [제품 소개서](docs/MORU-제품소개서-v1.1.pdf) 10쪽에 있습니다.
 - **문의** — 주식회사 크래프틱시스템즈 · 이 저장소의 [Issues](../../issues)에 남겨 주시거나 아래 연락처로 문의해 주십시오.
   - 담당자 · 전화 · 전자우편: _(기입 예정)_
 
