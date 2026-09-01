@@ -23,8 +23,6 @@
 <p align="center">
   <a href="https://mhb8436.github.io/moru-release/">제품 페이지</a> ·
   <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-brochure-v1.1.pdf">제품 소개서 PDF (A4 10쪽)</a> ·
-  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-leaflet-v1.1.pdf">리플릿 (A4 앞뒤)</a> ·
-  <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-slides-v1.1.pptx">발표 자료 (PPTX 16장)</a> ·
   <a href="https://github.com/mhb8436/moru-release/releases/download/v1.1/MORU-demo-v1.1.mp4">시연 영상 (mp4 1분 59초)</a> ·
   <a href="https://github.com/mhb8436/moru-krds-react">KRDS React 컴포넌트 45종 (MIT)</a> ·
   <a href="#도입-문의">도입 문의</a>
